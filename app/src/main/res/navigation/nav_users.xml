@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_users"
+    app:startDestination="@id/userList">
+
+    <fragment
+        android:id="@+id/userList"
+        android:name="com.nntsl.feature.list.UserListFragment">
+
+        <action
+            android:id="@+id/openUserDetails"
+            app:destination="@id/userDetails" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetails"
+        android:name="com.nntsl.feature.details.UserDetailsFragment">
+
+        <argument
+            android:name="user"
+            app:argType="com.nntsl.feature.model.UserListItem" />
+    </fragment>
+
+</navigation>
